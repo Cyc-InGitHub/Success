@@ -13,17 +13,7 @@ import java.util.List;
 
 import entity.entity;
 
-/**
- * <p>
- * Title: RanK
- * </p>
- * <p>
- * Description:
- * </p>
- * 
- * @author Cyc
- * @date 2020年10月14日
- */
+//国琪
 public interface Average {
-	public abstract int Average(List<entity> list);
+	public abstract entity Average(List<entity> list);
 }

@@ -9,6 +9,7 @@
 */
 package main;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import entity.entity;
@@ -32,6 +33,7 @@ import service.impl.SelectImpl;
  * @author Cyc
  * @date 2020年10月14日
  */
+//成员  褚佳静 潘亚楠 国琪 崔永超
 public class main {
 
 	public static void main(String[] args) {
@@ -39,13 +41,14 @@ public class main {
 		Highest h = new HighestImpl();
 		RanK r = new RankImpl();
 		Select s = new SelectImpl();
-		List<entity> list = Identifying.Identifying();
-		entity e =new entity();
-		System.out.println(list);
-		int average = a.Average(list);
-		int highest = h.Highest(list);
+		List<entity> list = new ArrayList();
+		list = Identifying.Identifying();
+		entity e = new entity();
+		entity average = a.Average(list);
+		entity highest = h.Highest(list);
 		List<entity> rank = r.RanK(list);
-		entity select = s.Select(e);
-
+		e.setNum("1");
+		entity select = s.Select(list, e);
+		System.out.println();
 	}
 }

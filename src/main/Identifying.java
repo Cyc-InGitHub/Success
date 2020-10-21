@@ -28,7 +28,7 @@ import utils.Read;
  * @date 2020年10月14日
  */
 public class Identifying {
-	static List Identifying() {
+	public static List Identifying() {
 		String str = Read.readTxt("D:2.txt");
 		System.out.println(str);
 		String[] parts = str.split("-");
@@ -44,7 +44,7 @@ public class Identifying {
 			list.add(e);
 			e = new entity();
 		}
-		return Arrays.asList(list);
+		return list;
 	}
 
 }

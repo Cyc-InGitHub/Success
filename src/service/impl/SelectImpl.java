@@ -15,17 +15,6 @@ import entity.entity;
 import service.RanK;
 import service.Select;
 
-/**
- * <p>
- * Title: Rankimpl
- * </p>
- * <p>
- * Description:
- * </p>
- * 
- * @author Cyc
- * @date 2020年10月14日
- */
 public class SelectImpl implements Select {
 
 	/*
@@ -38,9 +27,26 @@ public class SelectImpl implements Select {
 	 * @see service.Select#Select(entity.entity)
 	 */
 	@Override
-	public entity Select(entity e) {
-		// TODO Auto-generated method stub
-		return null;
+	public entity Select(List<entity> list, entity s) {
+		entity e = new entity();
+		// 以学号查询
+		if (!("").equals(s.getNum())) {
+			for (int i = 0; i < list.size(); i++) {
+				if (list.get(i).getNum().equals(s.getNum())) {
+					e = list.get(i);
+				}
+			}
+		}
+		// 以名字查询
+		if (!("").equals(s.getName())) {
+			for (int i = 0; i < list.size(); i++) {
+				if (list.get(i).getName().equals(s.getNum())) {
+					e = list.get(i);
+				}
+			}
+		}
+
+		return e;
 	}
 
 }

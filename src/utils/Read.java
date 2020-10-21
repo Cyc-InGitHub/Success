@@ -68,7 +68,6 @@ public class Read {
 		File file = new File(txtPath);
 		try {
 			if (file.exists()) {
-				// 判断文件是否存在，如果不存在就新建一个txt
 				file.createNewFile();
 			}
 			fileOutputStream = new FileOutputStream(file);

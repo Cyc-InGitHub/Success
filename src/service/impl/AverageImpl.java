@@ -14,30 +14,33 @@ import java.util.List;
 import entity.entity;
 import service.Average;
 
-/**
- * <p>
- * Title: Rankimpl
- * </p>
- * <p>
- * Description:
- * </p>
- * 
- * @author Cyc
- * @date 2020年10月14日
- */
 public class AverageImpl implements Average {
 
-	/* (non-Javadoc)  
-	 * <p>Title: Average</p>  
-	 * <p>Description: </p>  
+	/*
+	 * (non-Javadoc) <p>Title: Average</p> <p>Description: </p>
+	 * 
 	 * @param list
-	 * @return  
-	 * @see service.Average#Average(java.util.List)  
+	 * 
+	 * @return
+	 * 
+	 * @see service.Average#Average(java.util.List)
 	 */
 	@Override
-	public int Average(List<entity> list) {
-		// TODO Auto-generated method stub
-		return 0;
+	public entity Average(List<entity> list) {
+		entity e = new entity();
+		e.setChinese(0);
+		e.setEnglish(0);
+		e.setMathematics(0);
+		System.out.println(list.size());
+		for (int i = 0; i < list.size(); i++) {
+			e.setEnglish(e.getEnglish() + list.get(i).getEnglish());
+			e.setChinese(e.getChinese() + list.get(i).getChinese());
+			e.setMathematics(e.getMathematics() + list.get(i).getMathematics());
+		}
+		e.setChinese(e.getChinese() / list.size());
+		e.setEnglish(e.getEnglish() / list.size());
+		e.setMathematics(e.getMathematics() / list.size());
+		return e;
 	}
 
 }

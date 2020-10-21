@@ -25,6 +25,7 @@ public class entity {
 	private int mathematics;
 	private int chinese;
 	private int english;
+	private Integer  total; 
 
 	public String getNum() {
 		return num;
@@ -56,8 +57,13 @@ public class entity {
 	public void setEnglish(int english) {
 		this.english = english;
 	}
-	
-	
+	public Integer getTotal() {
+		return total;
+	}
+	public void setTotal(Integer total) {
+		this.total = total;
+	}
+
 
 	
 	

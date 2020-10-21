@@ -9,19 +9,12 @@
 */
 package service;
 
+import java.util.List;
+import java.util.Map;
+
 import entity.entity;
 
-/**
- * <p>
- * Title: RanK
- * </p>
- * <p>
- * Description:
- * </p>
- * 
- * @author Cyc
- * @date 2020年10月14日
- */
+//褚佳静
 public interface Select {
-	public abstract  entity  Select(entity e); 
+	public abstract entity Select(List<entity> list, entity e);
 }
